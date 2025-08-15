@@ -7,11 +7,12 @@ import {
 
 const AboutPage = () => {
   const stats = [
-    { icon: Users, label: 'Happy Customers', value: '50,000+' },
-    { icon: TrendingUp, label: 'Loans Disbursed', value: '₹5,000 Cr+' },
-    { icon: Award, label: 'Years of Experience', value: '15+' },
-    { icon: Shield, label: 'Partner Banks', value: '25+' }
-  ];
+  { icon: Users, label: 'Happy Customers', value: '1,200+' },
+  { icon: TrendingUp, label: 'Loans Disbursed', value: '₹85 Cr+' },
+  { icon: Award, label: 'Years of Experience', value: '8+' },
+  { icon: Shield, label: 'Partner Banks', value: '12+' }
+];
+
 
   const values = [
     {
@@ -193,7 +194,7 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -231,10 +232,10 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Leadership Team */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -270,7 +271,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications & Compliance */}
       <section className="py-20">

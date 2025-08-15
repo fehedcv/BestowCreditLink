@@ -49,31 +49,32 @@ const ContactPage = () => {
 
 
   const contactInfo = [
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: ['+91 00000000000'],
-      description: 'Mon-Sat: 9:00 AM - 7:00 PM'
-    },
-    {
-      icon: Mail,
-      title: 'Email Us',
-      details: ['info@bestowcreditlink.com'],
-      description: 'We reply within 24 hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: ['Thrissur, Kerala, India'],
-      description: 'Mon-Fri: 10:00 AM - 6:00 PM'
-    }
-  ];
+  {
+    icon: Phone,
+    title: 'call us',
+    details: ['+91 8330050027', '+91 8330050028'],
+    description: 'mon-sat: 9:00 am - 7:00 pm'
+  },
+  {
+    icon: Mail,
+    title: 'email us',
+    details: ['info@bestowcreditlink.com'],
+    description: 'we reply within 24 hours'
+  },
+  {
+    icon: MapPin,
+    title: 'visit us',
+    details: ['kanhangad, kasarkod district, kerala, india'],
+    description: 'mon-fri: 10:00 am - 6:00 pm'
+  }
+];
+
 
   const offices = [
     {
-      city: 'Head Office',
-      address: 'Thrissur, Kerala, India',
-      phone: '+91 00000000000',
+      city: 'head office',
+      address: 'kanhangad, kasarkod district, kerala, india',
+      phone: '+91 8330050027',
       email: 'info@bestowcreditlink.com'
     }
   ];

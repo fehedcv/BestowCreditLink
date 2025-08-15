@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook,Instagram  } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
               NRI loans, personal loans, and business financing to help you achieve your financial goals.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+              {[Facebook, Instagram].map((Icon, index) => (
                 <motion.a
                   key={index}
                   href="#"
@@ -60,13 +60,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+         {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-blue-400" />
-                <span className="text-gray-300">+91 00000000000</span>
+                <span className="text-gray-300">+91 83300 50027</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone size={18} className="text-blue-400" />
+                <span className="text-gray-300">+91 83300 50028</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-blue-400" />
@@ -75,11 +79,12 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-blue-400 mt-1" />
                 <span className="text-gray-300">
-                  Thrissur, Kerala, India
+                  Kanhangad, Kasarkod, Kerala
                 </span>
               </div>
             </div>
           </div>
+
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">

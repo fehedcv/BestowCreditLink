@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone size={14} />
-              <span>+91 00000000000</span>
+              <span>+91 8330050027</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail size={14} />
@@ -44,7 +44,7 @@ const Navbar = () => {
           </div>
           <div className="hidden md:flex items-center space-x-2">
             <MapPin size={14} />
-            <span>Thrissur, Kerala</span>
+            <span>Kanhangad, Kasarkod, Kerala</span>
           </div>
         </div>
       </div>
