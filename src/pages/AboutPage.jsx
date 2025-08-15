@@ -82,7 +82,7 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl font-bold mb-6">About Smart Way Solutions</h1>
+            <h1 className="text-5xl font-bold mb-6">About Bestow Credit Link</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Your trusted financial partner for over 15 years, committed to making 
               loan processes simple, transparent, and customer-friendly.

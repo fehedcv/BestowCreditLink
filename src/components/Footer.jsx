@@ -12,16 +12,16 @@ const Footer = () => {
           <div className="col-span-1 lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">S</span>
+                <span className="text-white font-bold text-xl">B</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold">Smart Way Solutions</h1>
-                <p className="text-sm text-gray-300">Your Financial Partner</p>
+                <h1 className="text-xl font-bold">Bestow Credit Link</h1>
+                <p className="text-sm text-gray-300">Your Trusted Financial Partner</p>
               </div>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
-              We provide comprehensive loan solutions to help you achieve your dreams. 
-              From home loans to business financing, we're here to support your financial journey.
+              We specialize in providing comprehensive loan solutions including home loans, 
+              NRI loans, personal loans, and business financing to help you achieve your financial goals.
             </p>
             <div className="flex space-x-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
@@ -42,11 +42,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {[
-                { name: 'Home Loan', href: '/services' },
-                { name: 'Personal Loan', href: '/services' },
-                { name: 'Business Loan', href: '/services' },
-                { name: 'Vehicle Loan', href: '/services' },
-                { name: 'Loan Calculator', href: '/rates' }
+                { name: 'Home Loan', href: '/contact' },
+                { name: 'NRI Loans', href: '/contact' },
+                { name: 'Personal Loan', href: '/contact' },
+                { name: 'Business Loan', href: '/contact' },
+                { name: 'Agriculture Loan', href: '/contact' }
               ].map((item) => (
                 <li key={item.name}>
                   <Link
@@ -66,16 +66,16 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-blue-400" />
-                <span className="text-gray-300">+91 9876543210</span>
+                <span className="text-gray-300">+91 00000000000</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-blue-400" />
-                <span className="text-gray-300">info@smartwaysolutions.com</span>
+                <span className="text-gray-300">info@bestowcreditlink.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin size={18} className="text-blue-400 mt-1" />
                 <span className="text-gray-300">
-                  123 Business Center, Andheri West, Mumbai - 400058
+                  Thrissur, Kerala, India
                 </span>
               </div>
             </div>
@@ -84,7 +84,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Smart Way Solutions. All rights reserved. | Privacy Policy | Terms & Conditions
+            © 2024 Bestow Credit Link. All rights reserved. | Privacy Policy | Terms & Conditions
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -10,18 +10,25 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import FAQPage from './pages/FAQPage';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/services" element={<ServicesPage />} /> */}
-        {/* <Route path="/how-it-works" element={<HowItWorksPage />} /> */}
-        {/* <Route path="/rates" element={<RatesPage />} /> */}
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} /> 
-        {/* <Route path="/faq" element={<FAQPage />} /> */}
       </Routes>
       <Footer />
     </div>

@@ -14,29 +14,49 @@ const HomePage = () => {
       icon: Home,
       title: 'Home Loan',
       description: 'Fulfill your dream of owning a home with our competitive home loan rates',
-      rate: '8.5% onwards',
-      amount: '₹50L - ₹5Cr'
+      specialty: 'Dream Home Solutions'
+    },
+    {
+      icon: Building,
+      title: 'NRI Loans',
+      description: 'Special loan products designed for Non-Resident Indians',
+      specialty: 'NRI Specialists'
+    },
+    {
+      icon: Home,
+      title: 'Loan Against Property',
+      description: 'Unlock the value of your property for immediate financial needs',
+      specialty: 'Property Financing'
     },
     {
       icon: Car,
       title: 'Vehicle Loan',
-      description: 'Get your dream vehicle with flexible EMI options and quick processing',
-      rate: '9.2% onwards',
-      amount: '₹2L - ₹50L'
+      description: 'Get your dream vehicle with flexible financing options',
+      specialty: 'Auto Financing'
     },
     {
       icon: User,
       title: 'Personal Loan',
       description: 'Quick personal loans for your immediate financial needs',
-      rate: '10.5% onwards',
-      amount: '₹50K - ₹10L'
+      specialty: 'Personal Finance'
     },
     {
       icon: Building,
       title: 'Business Loan',
       description: 'Grow your business with our tailored business financing solutions',
-      rate: '11.0% onwards',
-      amount: '₹5L - ₹2Cr'
+      specialty: 'Business Growth'
+    },
+    {
+      icon: Tractor,
+      title: 'Agriculture Loan',
+      description: 'Support your farming needs with specialized agriculture loans',
+      specialty: 'Farm Financing'
+    },
+    {
+      icon: Calculator,
+      title: 'Overdraft (OD)',
+      description: 'Flexible credit facility for your working capital needs',
+      specialty: 'Credit Solutions'
     }
   ];
 
@@ -101,20 +121,24 @@ const HomePage = () => {
                 quick approval, and transparent processes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
-                >
-                  Apply Now
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-200"
-                >
-                  Calculate EMI
-                </motion.button>
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
+                  >
+                    Get in Touch
+                  </motion.button>
+                </Link>
+                <Link to="/about">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-200"
+                  >
+                    Learn More
+                  </motion.button>
+                </Link>
               </div>
             </motion.div>
             
@@ -178,7 +202,7 @@ const HomePage = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {loanTypes.map((loan, index) => (
               <motion.div
                 key={index}
@@ -193,19 +217,16 @@ const HomePage = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{loan.title}</h3>
                 <p className="text-gray-600 mb-4">{loan.description}</p>
-                <div className="space-y-2 mb-4">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-500">Rate:</span>
-                    <span className="text-sm font-semibold text-green-600">{loan.rate}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-500">Amount:</span>
-                    <span className="text-sm font-semibold">{loan.amount}</span>
-                  </div>
+                <div className="mb-4">
+                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    {loan.specialty}
+                  </span>
                 </div>
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-colors">
-                  Learn More
-                </button>
+                <Link to="/contact">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-colors">
+                    Contact Us
+                  </button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -275,20 +296,24 @@ const HomePage = () => {
               Start your loan application today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
-              >
-                Apply Now
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
-              >
-                Get Free Consultation
-              </motion.button>
+              <Link to="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
+                >
+                  Contact Us Today
+                </motion.button>
+              </Link>
+              <Link to="/about">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200"
+                >
+                  About Our Company
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>

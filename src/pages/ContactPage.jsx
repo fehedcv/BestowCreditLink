@@ -41,41 +41,29 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+91 9876543210', '+91 8765432109'],
+      details: ['+91 00000000000'],
       description: 'Mon-Sat: 9:00 AM - 7:00 PM'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@smartwaysolutions.com', 'support@smartwaysolutions.com'],
+      details: ['info@bestowcreditlink.com'],
       description: 'We reply within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['123 Business Center, Andheri West', 'Mumbai, Maharashtra - 400058'],
+      details: ['Thrissur, Kerala, India'],
       description: 'Mon-Fri: 10:00 AM - 6:00 PM'
     }
   ];
 
   const offices = [
     {
-      city: 'Mumbai',
-      address: '123 Business Center, Andheri West, Mumbai - 400058',
-      phone: '+91 9876543210',
-      email: 'mumbai@smartwaysolutions.com'
-    },
-    {
-      city: 'Delhi',
-      address: '456 Corporate Plaza, Connaught Place, New Delhi - 110001',
-      phone: '+91 8765432109',
-      email: 'delhi@smartwaysolutions.com'
-    },
-    {
-      city: 'Bangalore',
-      address: '789 Tech Park, Koramangala, Bangalore - 560034',
-      phone: '+91 7654321098',
-      email: 'bangalore@smartwaysolutions.com'
+      city: 'Head Office',
+      address: 'Thrissur, Kerala, India',
+      phone: '+91 00000000000',
+      email: 'info@bestowcreditlink.com'
     }
   ];
 
