@@ -23,19 +23,30 @@ const ContactPage = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        loanType: '',
-        message: ''
-      });
-    }, 3000);
-  };
+  e.preventDefault();
+
+  fetch("https://script.google.com/macros/s/AKfycbwYJXxrolcyO1FaOAoAXW3QcwlsCL477Y_nmR4ZaBgaE4F7-DDXUBTIyrnURywEVpyI/exec", {
+    method: "POST",
+    body: JSON.stringify(formData),
+  })
+    .then((res) => res.json())
+    .then((response) => {
+      console.log("Success!", response);
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          loanType: '',
+          message: ''
+        });
+      }, 3000);
+    })
+    .catch((err) => console.error("Error!", err));
+};
+
 
   const contactInfo = [
     {

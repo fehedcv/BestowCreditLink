@@ -117,8 +117,8 @@ const HomePage = () => {
                 <span className="text-yellow-400 block">Financial Dreams</span>
               </h1>
               <p className="text-xl mb-8 text-blue-100 max-w-lg">
-                Home, Vehicle, Personal & Business loans with competitive rates, 
-                quick approval, and transparent processes.
+                We offer Home Loans, NRI Loans, Vehicle Loans, Personal Loans,
+                Business Loans, Agriculture Loans, and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
@@ -234,7 +234,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -278,7 +278,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
