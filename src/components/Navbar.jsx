@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import logo from '../assets/Artboard_3-removebg-preview.png';
+import logo from '../assets/LOGO BC.pdf (3).svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,16 +71,16 @@ const Navbar = () => {
                   <img
                     src={logo}
                     alt="Bestow Credit Link"
-                    className="h-16 md:h-18 lg:h-20 w-auto"
+                    className="h-28 w-56 md:h-32 md:w-64 lg:h-36 lg:w-72 object-contain"
                   />
                 </div>
 
                 {/* Mobile Logo */}
                 <div className="sm:hidden">
                   <img
-                    src="/images/logo-mobile.png"
+                    src={logo}
                     alt="Bestow Credit Link"
-                    className="h-12 w-auto"
+                    className="h-20 w-40 object-contain"
                   />
                 </div>
               </motion.div>

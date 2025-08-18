@@ -24,28 +24,36 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
   e.preventDefault();
-
-  fetch("https://script.google.com/macros/s/AKfycbwYJXxrolcyO1FaOAoAXW3QcwlsCL477Y_nmR4ZaBgaE4F7-DDXUBTIyrnURywEVpyI/exec", {
-    method: "POST",
-    body: JSON.stringify(formData),
+    Promise.all([
+  fetch("https://script.google.com/macros/s/AKfycbzqQlomFVv9xwR9_qu9CZf0bxJsk5HAwAIY9ntNE3XUTNZ1j6nsMkR1ow-VDGZ1_e2i/exec", { 
+    method: "POST", 
+    body: JSON.stringify(formData), 
+    headers: { "Content-Type": "application/json" } 
+  }),
+  fetch("https://formspree.io/f/xjkodwgb", { 
+    method: "POST", 
+    body: JSON.stringify(formData), 
+    headers: { "Content-Type": "application/json", "Accept": "application/json" } 
   })
-    .then((res) => res.json())
-    .then((response) => {
-      console.log("Success!", response);
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          loanType: '',
-          message: ''
-        });
-      }, 3000);
-    })
-    .catch((err) => console.error("Error!", err));
-};
+])
+.then(responses => Promise.all(responses.map(res => res.json())))
+.then((data) => {
+  console.log("Success!", data); 
+  setIsSubmitted(true);
+  setTimeout(() => {
+    setIsSubmitted(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      loanType: '',
+      message: ''
+    });
+  }, 3000);
+})
+.catch((err) => console.error("Error!", err));
+
+}
 
 
   const contactInfo = [

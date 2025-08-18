@@ -2,155 +2,207 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, Award, Users, TrendingUp, CheckCircle, 
-  Target, Heart, Lightbulb, Star
+  Target, Heart, Lightbulb, Star, MapPin, Calculator,
+  Building, Phone, Mail
 } from 'lucide-react';
 
 const AboutPage = () => {
   const stats = [
-  { icon: Users, label: 'Happy Customers', value: '1,200+' },
-  { icon: TrendingUp, label: 'Loans Disbursed', value: '₹85 Cr+' },
-  { icon: Award, label: 'Years of Experience', value: '8+' },
-  { icon: Shield, label: 'Partner Banks', value: '12+' }
-];
+    { icon: Award, label: 'Years of Experience', value: '8+' },
+    { icon: Building, label: 'Partner Banks & NBFCs', value: '15+' },
+    { icon: MapPin, label: 'Cities We Serve', value: '50+' },
+    { icon: TrendingUp, label: 'Loans Processed', value: '₹25 Crore+' }
+  ];
 
-
-  const values = [
+  const services = [
     {
-      icon: Shield,
-      title: 'Trust & Transparency',
-      description: 'We believe in complete transparency in all our dealings with clear terms and no hidden charges.'
+      title: 'Our Mission',
+      description: 'To provide transparent and hassle-free financial solutions to individuals and businesses.'
     },
     {
-      icon: Heart,
-      title: 'Customer First',
-      description: 'Our customers are at the heart of everything we do. We strive to exceed their expectations.'
+      title: 'Our Vision',
+      description: 'To become a trusted financial partner helping people achieve their dreams through smart lending.'
     },
     {
-      icon: Lightbulb,
-      title: 'Innovation',
-      description: 'We continuously innovate to provide better financial solutions and improved customer experience.'
+      title: 'Our Values',
+      description: 'Transparency, integrity, customer-first approach, and ethical business practices.'
     },
     {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We are committed to delivering excellence in service quality and customer satisfaction.'
+      title: 'Our Commitment',
+      description: 'Dedicated to providing personalized service and competitive rates for all our clients.'
     }
   ];
 
-  const team = [
+  const features = [
     {
-      name: 'Rajesh Gupta',
-      role: 'Chief Executive Officer',
-      experience: '20+ years',
-      description: 'Former banking executive with expertise in retail lending and financial services.'
+      icon: Users,
+      title: 'Customer Satisfaction',
+      subtitle: '2500+ happy customers served'
     },
     {
-      name: 'Priya Sharma',
-      role: 'Chief Technology Officer',
-      experience: '15+ years',
-      description: 'Technology leader with experience in fintech and digital transformation.'
-    },
-    {
-      name: 'Amit Kumar',
-      role: 'Head of Operations',
-      experience: '18+ years',
-      description: 'Operations expert specializing in loan processing and customer service.'
-    },
-    {
-      name: 'Sunita Patel',
-      role: 'Head of Risk Management',
-      experience: '12+ years',
-      description: 'Risk management professional with expertise in credit assessment and compliance.'
+      icon: Calculator,
+      title: 'Smart Technology',
+      description: 'Advanced loan calculators and digital tools for better financial planning.',
+      subtitle: 'Get instant loan eligibility and EMI calculations online!'
     }
   ];
 
-  const milestones = [
-    { year: '2009', title: 'Company Founded', description: 'Started with a vision to simplify loan processes' },
-    { year: '2012', title: 'Digital Platform Launch', description: 'Launched our first online loan application platform' },
-    { year: '2016', title: '10,000 Customers', description: 'Reached milestone of serving 10,000+ customers' },
-    { year: '2020', title: 'Mobile App Launch', description: 'Introduced mobile app for better customer experience' },
-    { year: '2024', title: '50,000+ Customers', description: 'Proud to serve over 50,000 satisfied customers' }
+  const benefits = [
+    'Quick Processing',
+    'Competitive Rates', 
+    'Expert Guidance',
+    'Digital Experience',
+    'Transparent Process'
+  ];
+
+  const timeline = [
+    { year: '2016', title: 'Company Founded', icon: Building },
+    { year: '2017', title: 'First Partnership Established', icon: Phone },
+    { year: '2018', title: 'Team Expansion', icon: TrendingUp },
+    { year: '2019', title: 'Digital Platform Launch', icon: Calculator },
+    { year: '2021', title: 'Multi-City Presence', icon: MapPin },
+    { year: '2022', title: 'Technology Upgrade', icon: Lightbulb },
+    { year: '2024', title: 'Industry Recognition', icon: Award }
+  ];
+
+  const recognitions = [
+    { name: 'Best Service', color: 'bg-blue-600' },
+    { name: 'Customer Choice', color: 'bg-gray-600' },
+    { name: 'Excellence Award', color: 'bg-yellow-600' },
+    { name: 'Trust Badge', color: 'bg-green-600' },
+    { name: 'Quality Service', color: 'bg-purple-600' }
+  ];
+
+  const faqs = [
+    {
+      question: 'What makes us different from other loan providers?',
+      answer: 'We focus on personalized service, transparent processes, and building long-term relationships with our customers. Our team of experienced professionals ensures you get the best loan options suited to your needs.'
+    },
+    {
+      question: 'Why should you choose us?',
+      answer: 'We offer competitive interest rates, quick processing, minimal documentation, and dedicated customer support throughout your loan journey.'
+    },
+    {
+      question: 'How do we ensure the best rates?',
+      answer: 'We work with multiple banks and financial institutions to compare and negotiate the best possible rates for our customers.'
+    },
+    {
+      question: 'What is our process?',
+      answer: 'Simple 4-step process: Application → Document Verification → Approval → Disbursement. We handle all paperwork and bank coordination.'
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
+
+      {/* Notice Banner */}
+      <div className="bg-blue-50 border-l-4 border-blue-400 py-4">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-start space-x-3">
+            <div className="w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-white text-xs font-bold">!</span>
+            </div>
+            <p className="text-gray-700">
+              <strong>Note:</strong> We do not charge any processing fees upfront. Beware of fraudulent calls asking for advance payments. Always verify through our official channels.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center mb-16"
           >
-            <h1 className="text-5xl font-bold mb-6">About Bestow Credit Link</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Your trusted financial partner for over 15 years, committed to making 
-              loan processes simple, transparent, and customer-friendly.
-            </p>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">About Us</h1>
+            <h2 className="text-xl text-gray-600 font-medium">YOUR TRUSTED FINANCIAL PARTNER</h2>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6"
+                className="bg-white p-6 rounded-lg shadow-lg border text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="text-blue-600" size={28} />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <h3 className="text-lg font-bold text-blue-600 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-sm">{service.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20">
+      {/* Features Section */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <img
-                src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-                alt="Our Mission"
-                className="rounded-2xl shadow-2xl"
-              />
-            </motion.div>
+            <div className="space-y-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="text-blue-600" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                    {feature.subtitle && (
+                      <p className="text-gray-600 mb-2">{feature.subtitle}</p>
+                    )}
+                    {feature.description && (
+                      <p className="text-gray-600">{feature.description}</p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* Benefits */}
+              <div className="mt-8">
+                <h4 className="text-lg font-bold text-gray-900 mb-4">Why Choose Us</h4>
+                <div className="flex flex-wrap gap-3">
+                  {benefits.map((benefit, index) => (
+                    <span key={index} className="bg-white px-4 py-2 rounded-full text-sm text-gray-700 shadow-sm">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Illustration */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission & Vision</h2>
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Mission</h3>
-                  <p className="text-gray-600">
-                    To democratize access to financial services by providing simple, transparent, 
-                    and customer-centric loan solutions that empower individuals and businesses 
-                    to achieve their goals.
-                  </p>
+              <div className="bg-gradient-to-br from-purple-400 to-blue-600 rounded-2xl p-8 text-white">
+                <div className="flex items-center justify-center space-x-4">
+                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <Users size={32} />
+                  </div>
+                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <Calculator size={32} />
+                  </div>
+                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <TrendingUp size={32} />
+                  </div>
                 </div>
-                <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Vision</h3>
-                  <p className="text-gray-600">
-                    To become India's most trusted and preferred financial services platform, 
-                    known for innovation, integrity, and exceptional customer experience.
-                  </p>
+                <div className="text-center mt-6">
+                  <h3 className="text-xl font-bold mb-2">Financial Excellence</h3>
+                  <p className="text-blue-100">Empowering your financial journey</p>
                 </div>
               </div>
             </motion.div>
@@ -158,35 +210,68 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-white">
+      {/* Founder Quote */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600">
-              The principles that guide us in everything we do
-            </p>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="bg-blue-100 rounded-2xl p-4">
+                <img
+                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                  alt="Founder"
+                  className="w-full h-80 object-cover rounded-xl"
+                />
+              </div>
+            </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="text-6xl text-blue-600 mb-4">"</div>
+              <h2 className="text-2xl font-bold text-blue-600 mb-6">
+                Building Trust Through Transparent Financial Solutions
+              </h2>
+              <div className="border-l-4 border-red-500 pl-6 mb-6">
+                <p className="text-gray-600 leading-relaxed">
+                  "Our journey began with a simple belief - everyone deserves access to fair and transparent financial services. 
+                  We've built our company on the foundation of trust, integrity, and customer satisfaction. Our team works 
+                  tirelessly to ensure that each client receives personalized attention and the best possible loan solutions. 
+                  We're not just loan providers; we're your financial partners committed to helping you achieve your dreams."
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900">Rajesh Kumar</h4>
+                <p className="text-gray-600">Founder & CEO</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6"
+                className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="text-white" size={28} />
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="text-blue-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                <div className="text-gray-600 text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -194,7 +279,7 @@ const AboutPage = () => {
       </section>
 
       {/* Timeline */}
-      {/* <section className="py-20">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -203,39 +288,41 @@ const AboutPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-600">
-              Key milestones in our growth story
-            </p>
+            <p className="text-xl text-gray-600">Building trust, one client at a time</p>
           </motion.div>
 
-          <div className="space-y-8">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-              >
-                <div className={`flex-1 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                  <div className="bg-white p-6 rounded-xl shadow-lg">
-                    <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{milestone.title}</h3>
-                    <p className="text-gray-600">{milestone.description}</p>
+          <div className="relative">
+            {/* Timeline Path */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-full h-1 bg-gradient-to-r from-red-300 via-blue-300 to-red-300 rounded-full"></div>
+            </div>
+
+            {/* Timeline Items */}
+            <div className="relative grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
+              {timeline.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex flex-col items-center"
+                >
+                  <div className="w-12 h-12 bg-white border-4 border-red-500 rounded-full flex items-center justify-center mb-4 z-10">
+                    <item.icon size={20} className="text-red-500" />
                   </div>
-                </div>
-                <div className="w-4 h-4 bg-blue-600 rounded-full relative z-10">
-                  <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-75"></div>
-                </div>
-                <div className="flex-1"></div>
-              </motion.div>
-            ))}
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600 mb-2">{item.year}</div>
+                    <p className="text-sm text-gray-600">{item.title}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
-      {/* Leadership Team */}
-      {/* <section className="py-20 bg-white">
+      {/* Awards */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -243,69 +330,61 @@ const AboutPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Leadership Team</h2>
-            <p className="text-xl text-gray-600">
-              Meet the experienced professionals leading our organization
-            </p>
+            <h2 className="text-3xl font-bold text-blue-600 mb-4">Awards & Recognition 🏆</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
+          <div className="flex justify-center items-end space-x-8">
+            {recognitions.map((award, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className={`w-16 h-16 ${award.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
+                  <Award className="text-white" size={24} />
+                </div>
+                <div className="w-20 h-6 bg-yellow-400 rounded-full mx-auto mb-2"></div>
+                <p className="text-sm font-medium text-gray-700">{award.name}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+          </motion.div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow"
+                className="border border-gray-200 rounded-lg"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center justify-between">
+                    {faq.question}
+                    <span className="text-gray-400">^</span>
+                  </h3>
+                  {index === 0 && (
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  )}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600 font-semibold mb-2">{member.role}</p>
-                <p className="text-sm text-gray-500 mb-3">{member.experience}</p>
-                <p className="text-gray-600 text-sm">{member.description}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Certifications & Compliance */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Certifications & Compliance</h2>
-            <p className="text-xl text-gray-600">
-              We maintain the highest standards of compliance and security
-            </p>
-          </motion.div>
-
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6">
-                <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">RBI Guidelines</h3>
-                <p className="text-gray-600">Fully compliant with RBI regulations and guidelines</p>
-              </div>
-              <div className="text-center p-6">
-                <Award className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">ISO 27001</h3>
-                <p className="text-gray-600">Information security management certified</p>
-              </div>
-              <div className="text-center p-6">
-                <CheckCircle className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">SSL Secured</h3>
-                <p className="text-gray-600">256-bit SSL encryption for data protection</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
