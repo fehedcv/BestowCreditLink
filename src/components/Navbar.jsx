@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import logo from '../assets/LOGO BC.pdf (3).svg';
+import logo from '../assets/Logo.svg'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +60,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo and Company Name */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center flex-shrink-0">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -108,8 +108,8 @@ const Navbar = () => {
               </motion.div>
             </Link>
 
-            {/* Desktop Navigation - Centered */}
-            <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
+            {/* Desktop Navigation - Properly Centered */}
+            <div className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2">
               <div className="flex items-center space-x-8">
                 {navigation.map((item) => (
                   <Link
@@ -127,7 +127,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Apply Now Button - Desktop */}
+            {/* Apply Now Button - Desktop (commented out as in original) */}
             {/* <div className="hidden lg:flex items-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}

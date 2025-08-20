@@ -239,49 +239,42 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {loanTypes.map((loan, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border-t-4 border-blue-500 transform hover:-translate-y-3 hover:scale-105 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Card Header */}
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-700 transition-colors duration-300">
-                    <loan.icon className="text-white" size={28} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            {loanTypes.map((loan) => {
+              const Icon = loan.icon;
+              return (
+                <div
+                  key={loan.title}
+                  className="bg-white rounded-lg shadow-sm p-6 flex flex-col h-full"
+                >
+                  <div className="flex items-start space-x-4">
+                    <Icon size={36} className="text-blue-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-800">{loan.title}</h3>
+                      <p className="text-sm text-gray-500">{loan.specialty}</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{loan.title}</h3>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">{loan.rate}</div>
-                  <span className="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                    {loan.specialty}
-                  </span>
-                </div>
-                
-                {/* Card Body */}
-                <div className="p-6">
-                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{loan.description}</p>
-                  
-                  {/* Features List */}
-                  <div className="mb-6">
-                    {loan.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-700 mb-2">
-                        <CheckCircle className="text-green-500 mr-2 flex-shrink-0" size={16} />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Action Button */}
-                  <a href="/contact">
-                    <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:shadow-lg">
-                      Apply Now
-                      <ArrowRight className="ml-2" size={16} />
+
+                  <p className="mt-4 text-sm text-gray-600 flex-grow">{loan.description}</p>
+
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-sm font-medium text-blue-600">{loan.rate}</span>
+                    <button className="text-sm bg-blue-600 text-white px-3 py-1 rounded-md hover:bg-blue-700 transition">
+                      Learn more
                     </button>
-                  </a>
+                  </div>
+
+                  {/* Optional features list aligned at bottom for consistent card height */}
+                  <ul className="mt-4 text-xs text-gray-500 space-y-1">
+                    {loan.features?.map((f, i) => (
+                      <li key={i} className="inline-block">
+                        • {f}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Facebook,Instagram  } from 'lucide-react';
-import logo from '../assets/LOGO BC.pdf (3).svg';
+import logo from '../assets/Logo.svg';
 
 
 const Footer = () => {

@@ -365,48 +365,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-600">Building trust, one client at a time</p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline Path */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-full h-1 bg-gradient-to-r from-red-300 via-blue-300 to-red-300 rounded-full"></div>
-            </div>
-
-            {/* Timeline Items */}
-            <div className="relative grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col items-center"
-                >
-                  <div className="w-12 h-12 bg-white border-4 border-red-500 rounded-full flex items-center justify-center mb-4 z-10">
-                    <item.icon size={20} className="text-red-500" />
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600 mb-2">{item.year}</div>
-                    <p className="text-sm text-gray-600">{item.title}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
