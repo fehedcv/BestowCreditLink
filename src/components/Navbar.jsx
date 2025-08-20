@@ -59,35 +59,57 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
+            {/* Logo and Company Name */}
             <Link to="/" className="flex items-center">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center"
+                className="flex items-center space-x-3"
               >
-                {/* Desktop Logo */}
-                <div className="hidden sm:block">
+                {/* Desktop Logo and Text */}
+                <div className="hidden sm:flex items-center space-x-3">
                   <img
                     src={logo}
                     alt="Bestow Credit Link"
-                    className="h-28 w-56 md:h-32 md:w-64 lg:h-36 lg:w-72 object-contain"
+                    className="h-20 w-20 md:h-24 md:w-24 object-contain"
                   />
+                  <div className="flex items-center space-x-2">
+                    <span className="text-base md:text-lg font-bold text-blue-900">
+                      BESTOW
+                    </span>
+                    <span className="text-base md:text-lg font-bold text-yellow-500">
+                      CREDIT
+                    </span>
+                    <span className="text-base md:text-lg font-bold text-blue-900">
+                      LINK
+                    </span>
+                  </div>
                 </div>
 
-                {/* Mobile Logo */}
-                <div className="sm:hidden">
+                {/* Mobile Logo and Text */}
+                <div className="sm:hidden flex items-center space-x-2">
                   <img
                     src={logo}
                     alt="Bestow Credit Link"
-                    className="h-20 w-40 object-contain"
+                    className="h-14 w-14 object-contain"
                   />
+                  <div className="flex items-center space-x-1">
+                    <span className="text-xs font-bold text-blue-900">
+                      BESTOW
+                    </span>
+                    <span className="text-xs font-bold text-yellow-500">
+                      CREDIT
+                    </span>
+                    <span className="text-xs font-bold text-blue-900">
+                      LINK
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </Link>
 
             {/* Desktop Navigation - Centered */}
-            <div className="hidden lg:flex items-center justify-center flex-1">
+            <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
               <div className="flex items-center space-x-8">
                 {navigation.map((item) => (
                   <Link

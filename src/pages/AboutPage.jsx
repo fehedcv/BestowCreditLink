@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { 
   Shield, Award, Users, TrendingUp, CheckCircle, 
   Target, Heart, Lightbulb, Star, MapPin, Calculator,
-  Building, Phone, Mail
+  Building, Phone, Mail, CreditCard, Globe, UserCheck
 } from 'lucide-react';
 
 const AboutPage = () => {
@@ -30,6 +30,33 @@ const AboutPage = () => {
     {
       title: 'Our Commitment',
       description: 'Dedicated to providing personalized service and competitive rates for all our clients.'
+    }
+  ];
+
+  const whoWeAreItems = [
+    {
+      icon: Shield,
+      title: 'Ruloans',
+      subtitle: 'Your one-stop shop for comprehensive financial solutions.',
+      color: 'bg-blue-50 text-blue-600'
+    },
+    {
+      icon: CreditCard,
+      title: 'Service Offered',
+      subtitle: 'Home Loans, Personal Loans, Credit Cards, Business Loans Balance Transfers And More.',
+      color: 'bg-green-50 text-green-600'
+    },
+    {
+      icon: Globe,
+      title: 'Nationwide Reach',
+      subtitle: 'Helping clients in 4,000+ cities through a wide branch network.',
+      color: 'bg-purple-50 text-purple-600'
+    },
+    {
+      icon: UserCheck,
+      title: 'Expertise',
+      subtitle: 'Founded by financial professionals with 25+ years of experience.',
+      color: 'bg-orange-50 text-orange-600'
     }
   ];
 
@@ -65,12 +92,26 @@ const AboutPage = () => {
     { year: '2024', title: 'Industry Recognition', icon: Award }
   ];
 
-  const recognitions = [
-    { name: 'Best Service', color: 'bg-blue-600' },
-    { name: 'Customer Choice', color: 'bg-gray-600' },
-    { name: 'Excellence Award', color: 'bg-yellow-600' },
-    { name: 'Trust Badge', color: 'bg-green-600' },
-    { name: 'Quality Service', color: 'bg-purple-600' }
+  const clientTrustFeatures = [
+    {
+      icon: Users,
+      title: 'Client Trust',
+      subtitle: '21 lakh+ customers served'
+    },
+    {
+      icon: Calculator,
+      title: 'Innovative Technology',
+      description: 'Utilise our proprietary Loan Calculator for tailored loan options based on market trends.',
+      subtitle: 'Connect with us to make informed financial decisions and realize your dreams!'
+    }
+  ];
+
+  const benefitsList = [
+    'Improved Readability',
+    'Enhanced Clarity',
+    'Easy Navigation',
+    'Visual Appeal',
+    'Highlighting Key Services'
   ];
 
   const faqs = [
@@ -136,6 +177,95 @@ const AboutPage = () => {
                 <p className="text-gray-600 text-sm">{service.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who Are We Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Who Are We?</h2>
+            <p className="text-sm text-gray-600 uppercase tracking-wide">INDIA'S LEADING LOAN DISTRIBUTION CHANNEL COMPANY</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {whoWeAreItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-sm border text-center"
+              >
+                <div className={`w-12 h-12 ${item.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <item.icon size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.subtitle}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Client Trust and Innovation Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              {clientTrustFeatures.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="text-blue-600" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                    {feature.subtitle && (
+                      <p className="text-gray-600 mb-2">{feature.subtitle}</p>
+                    )}
+                    {feature.description && (
+                      <p className="text-gray-600">{feature.description}</p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* Benefits */}
+              <div className="mt-8">
+                <h4 className="text-lg font-bold text-gray-900 mb-4">Benefits</h4>
+                <div className="flex flex-wrap gap-3">
+                  {benefitsList.map((benefit, index) => (
+                    <span key={index} className="bg-white px-4 py-2 rounded-full text-sm text-gray-700 shadow-sm border">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Illustration */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
+                <img
+                  src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
+                  alt="Team collaboration"
+                  className="w-full h-64 object-cover rounded-xl"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -210,50 +340,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Founder Quote */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="bg-blue-100 rounded-2xl p-4">
-                <img
-                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
-                  alt="Founder"
-                  className="w-full h-80 object-cover rounded-xl"
-                />
-              </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="text-6xl text-blue-600 mb-4">"</div>
-              <h2 className="text-2xl font-bold text-blue-600 mb-6">
-                Building Trust Through Transparent Financial Solutions
-              </h2>
-              <div className="border-l-4 border-red-500 pl-6 mb-6">
-                <p className="text-gray-600 leading-relaxed">
-                  "Our journey began with a simple belief - everyone deserves access to fair and transparent financial services. 
-                  We've built our company on the foundation of trust, integrity, and customer satisfaction. Our team works 
-                  tirelessly to ensure that each client receives personalized attention and the best possible loan solutions. 
-                  We're not just loan providers; we're your financial partners committed to helping you achieve your dreams."
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-gray-900">Rajesh Kumar</h4>
-                <p className="text-gray-600">Founder & CEO</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
@@ -321,40 +408,8 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Awards */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-blue-600 mb-4">Awards & Recognition 🏆</h2>
-          </motion.div>
-
-          <div className="flex justify-center items-end space-x-8">
-            {recognitions.map((award, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className={`w-16 h-16 ${award.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
-                  <Award className="text-white" size={24} />
-                </div>
-                <div className="w-20 h-6 bg-yellow-400 rounded-full mx-auto mb-2"></div>
-                <p className="text-sm font-medium text-gray-700">{award.name}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQs */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
