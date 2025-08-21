@@ -18,7 +18,7 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="Bestow Credit Link"
-                  className="h-16 w-32 lg:h-20 lg:w-40 object-contain"
+                  className="h-20 w-40 lg:h-24 lg:w-48 object-contain"
                 />
               </div>
               {/* Mobile Logo */}
@@ -26,17 +26,17 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="Bestow Credit Link"
-                  className="h-12 w-24 object-contain"
+                  className="h-16 w-32 object-contain"
                 />
               </div>
               <div>
-                <h1 className="text-xl font-bold">Bestow Credit Link</h1>
+                <h1 className="text-lg font-bold">Bestow Credit Link</h1>
                 <p className="text-sm text-gray-300">Your Trusted Financial Partner</p>
               </div>
             </Link>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-              We specialize in providing comprehensive loan solutions including home loans, 
-              NRI loans, personal loans, and business financing to help you achieve your financial goals.
+              We specialize in providing comprehensive loan solutions including home loan, 
+              NRI loan, personal loan, and business financing to help you achieve your financial goals.
             </p>
             <div className="flex space-x-4">
               {[Facebook, Instagram].map((Icon, index) => (
@@ -58,7 +58,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {[
                 { name: 'Home Loan', href: '/contact' },
-                { name: 'NRI Loans', href: '/contact' },
+                { name: 'NRI loan', href: '/contact' },
                 { name: 'Personal Loan', href: '/contact' },
                 { name: 'Business Loan', href: '/contact' },
                 { name: 'Agriculture Loan', href: '/contact' }

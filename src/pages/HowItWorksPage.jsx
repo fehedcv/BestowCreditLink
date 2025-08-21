@@ -269,7 +269,7 @@ const HowItWorksPage = () => {
               Ready to Start Your Application?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join thousands who have successfully obtained loans through our platform
+              Join thousands who have successfully obtained loan through our platform
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -52,7 +52,7 @@ const Navbar = () => {
       {/* Main Navigation */}
       <motion.nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white shadow-lg' : 'bg-white border-b border-gray-100'
+          scrolled ? "bg-white shadow-lg" : "bg-white border-b border-gray-100"
         }`}
         initial={false}
         animate={{ y: 0 }}
@@ -87,23 +87,13 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Logo and Text */}
-                <div className="sm:hidden flex items-center space-x-2">
+                <div className="sm:hidden flex items-center justify-start">
                   <img
                     src={logo}
                     alt="Bestow Credit Link"
-                    className="h-14 w-14 object-contain"
+                    className="w-[110px] object-contain cursor-pointer ml-1"
+                    onClick={() => navigate("/")}
                   />
-                  <div className="flex items-center space-x-1">
-                    <span className="text-xs font-bold text-blue-900">
-                      BESTOW
-                    </span>
-                    <span className="text-xs font-bold text-yellow-500">
-                      CREDIT
-                    </span>
-                    <span className="text-xs font-bold text-blue-900">
-                      LINK
-                    </span>
-                  </div>
                 </div>
               </motion.div>
             </Link>
@@ -117,8 +107,8 @@ const Navbar = () => {
                     to={item.href}
                     className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                       location.pathname === item.href
-                        ? 'text-blue-600 border-b-2 border-blue-600'
-                        : 'text-gray-700 hover:text-blue-600'
+                        ? "text-blue-600 border-b-2 border-blue-600"
+                        : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
                     {item.name}
@@ -156,7 +146,7 @@ const Navbar = () => {
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
@@ -169,8 +159,8 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     className={`block px-3 py-3 text-base font-medium rounded-md transition-colors ${
                       location.pathname === item.href
-                        ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
+                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                     }`}
                   >
                     {item.name}

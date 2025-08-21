@@ -74,7 +74,7 @@ const ServicesPage = () => {
       icon: User,
       title: 'Personal Loan',
       subtitle: 'Quick Cash for Personal Needs',
-      description: 'Get instant personal loans for your immediate financial requirements with minimal documentation.',
+      description: 'Get instant personal loan for your immediate financial requirements with minimal documentation.',
       rate: '10.5% onwards',
       amount: '₹50K - ₹10L',
       tenure: 'Up to 5 years',
@@ -111,7 +111,7 @@ const ServicesPage = () => {
       features: [
         'Working capital solutions',
         'Equipment financing',
-        'Business expansion loans',
+        'Business expansion loan',
         'Flexible repayment terms',
         'Overdraft facility'
       ],
@@ -164,7 +164,7 @@ const ServicesPage = () => {
       icon: CreditCard,
       title: 'Loan Against Property',
       subtitle: 'Unlock Your Property Value',
-      description: 'Get high-value loans against your residential or commercial property at attractive rates.',
+      description: 'Get high-value loan against your residential or commercial property at attractive rates.',
       rate: '9.5% onwards',
       amount: '₹10L - ₹10Cr',
       tenure: 'Up to 20 years',

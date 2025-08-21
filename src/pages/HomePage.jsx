@@ -56,7 +56,7 @@ const HomePage = () => {
     },
     {
       icon: Building,
-      title: 'NRI Loans',
+      title: 'NRI loan',
       description: 'Special loan products designed for Non-Resident Indians',
       specialty: 'NRI Specialists',
       rate: '9.2% onwards',
@@ -81,7 +81,7 @@ const HomePage = () => {
     {
       icon: User,
       title: 'Personal Loan',
-      description: 'Quick personal loans for your immediate financial needs',
+      description: 'Quick personal loan for your immediate financial needs',
       specialty: 'Personal Finance',
       rate: '10.5% onwards',
       features: ['Instant approval', 'No collateral', 'Flexible EMI']
@@ -92,15 +92,15 @@ const HomePage = () => {
       description: 'Grow your business with our tailored business financing solutions',
       specialty: 'Business Growth',
       rate: '11.2% onwards',
-      features: ['Working capital', 'Equipment loans', 'Easy terms']
+      features: ['Working capital', 'Equipment loan', 'Easy terms']
     },
     {
       icon: Tractor,
       title: 'Agriculture Loan',
-      description: 'Support your farming needs with specialized agriculture loans',
+      description: 'Support your farming needs with specialized agriculture loan',
       specialty: 'Farm Financing',
       rate: '8.8% onwards',
-      features: ['Seasonal loans', 'Equipment finance', 'Crop insurance']
+      features: ['Seasonal loan', 'Equipment finance', 'Crop insurance']
     },
     {
       icon: Calculator,
@@ -139,12 +139,12 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-white animate-fade-in-left">
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Quick Loans for Your
+                Quick loan for Your
                 <span className="text-yellow-400 block">Financial Dreams</span>
               </h1>
               <p className="text-xl mb-8 text-blue-100 max-w-lg">
-                We offer Home Loans, NRI Loans, Vehicle Loans, Personal Loans,
-                Business Loans, Agriculture Loans, and more.
+                We offer Home loan, NRI loan, Vehicle loan, Personal loan,
+                Business loan, Agriculture loan, and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/contact">

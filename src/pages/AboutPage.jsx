@@ -11,7 +11,7 @@ const AboutPage = () => {
     { icon: Award, label: 'Years of Experience', value: '8+' },
     { icon: Building, label: 'Partner Banks & NBFCs', value: '15+' },
     { icon: MapPin, label: 'Cities We Serve', value: '50+' },
-    { icon: TrendingUp, label: 'Loans Processed', value: '₹25 Crore+' }
+    { icon: TrendingUp, label: 'loan Processed', value: '₹25 Crore+' }
   ];
 
   const services = [
@@ -36,14 +36,14 @@ const AboutPage = () => {
   const whoWeAreItems = [
     {
       icon: Shield,
-      title: 'Ruloans',
+      title: 'Ruloan',
       subtitle: 'Your one-stop shop for comprehensive financial solutions.',
       color: 'bg-blue-50 text-blue-600'
     },
     {
       icon: CreditCard,
       title: 'Service Offered',
-      subtitle: 'Home Loans, Personal Loans, Credit Cards, Business Loans Balance Transfers And More.',
+      subtitle: 'Home loan, Personal loan, Credit Cards, Business loan Balance Transfers And More.',
       color: 'bg-green-50 text-green-600'
     },
     {

@@ -23,8 +23,8 @@ const FAQPage = () => {
     {
       id: 1,
       category: 'general',
-      question: 'What types of loans do you offer?',
-      answer: 'We offer a comprehensive range of loan products including Home Loans, Personal Loans, Vehicle Loans, Business Loans, Agriculture Loans, and Loan Against Property. Each product is designed to meet specific financial needs with competitive rates and flexible terms.'
+      question: 'What types of loan do you offer?',
+      answer: 'We offer a comprehensive range of loan products including Home loan, Personal loan, Vehicle loan, Business loan, Agriculture loan, and Loan Against Property. Each product is designed to meet specific financial needs with competitive rates and flexible terms.'
     },
     {
       id: 2,
@@ -35,25 +35,25 @@ const FAQPage = () => {
     {
       id: 3,
       category: 'home-loan',
-      question: 'What is the maximum loan amount for home loans?',
-      answer: 'We offer home loans ranging from ₹50 lakhs to ₹5 crores, depending on your income, credit profile, and the property value. The final amount is determined based on your repayment capacity and eligibility criteria.'
+      question: 'What is the maximum loan amount for home loan?',
+      answer: 'We offer home loan ranging from ₹50 lakhs to ₹5 crores, depending on your income, credit profile, and the property value. The final amount is determined based on your repayment capacity and eligibility criteria.'
     },
     {
       id: 4,
       category: 'home-loan',
-      question: 'Are there any prepayment charges on home loans?',
-      answer: 'There are no prepayment charges after the first year of the loan. Within the first year, a nominal charge of 2% may apply on the prepaid amount for floating rate loans.'
+      question: 'Are there any prepayment charges on home loan?',
+      answer: 'There are no prepayment charges after the first year of the loan. Within the first year, a nominal charge of 2% may apply on the prepaid amount for floating rate loan.'
     },
     {
       id: 5,
       category: 'personal-loan',
       question: 'Do I need collateral for a personal loan?',
-      answer: 'No, personal loans are unsecured loans that do not require any collateral or security. The approval is based on your income, credit score, and repayment capacity.'
+      answer: 'No, personal loan are unsecured loan that do not require any collateral or security. The approval is based on your income, credit score, and repayment capacity.'
     },
     {
       id: 6,
       category: 'personal-loan',
-      question: 'What is the minimum income requirement for personal loans?',
+      question: 'What is the minimum income requirement for personal loan?',
       answer: 'The minimum monthly income requirement is ₹20,000 for salaried individuals and ₹25,000 for self-employed individuals. However, eligibility also depends on other factors like credit score and employment stability.'
     },
     {
@@ -84,7 +84,7 @@ const FAQPage = () => {
       id: 11,
       category: 'documents',
       question: 'What documents do I need to apply for a loan?',
-      answer: 'Common documents include identity proof (Aadhaar, PAN), address proof, income proof (salary slips, ITR), bank statements for the last 6 months, and specific documents based on the loan type (property documents for home loans, vehicle quotation for vehicle loans, etc.).'
+      answer: 'Common documents include identity proof (Aadhaar, PAN), address proof, income proof (salary slips, ITR), bank statements for the last 6 months, and specific documents based on the loan type (property documents for home loan, vehicle quotation for vehicle loan, etc.).'
     },
     {
       id: 12,
