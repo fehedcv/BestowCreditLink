@@ -143,8 +143,8 @@ const HomePage = () => {
                 <span className="text-yellow-400 block">Financial Dreams</span>
               </h1>
               <p className="text-xl mb-8 text-blue-100 max-w-lg">
-                We offer Home loan, NRI loan, Vehicle loan, Personal loan,
-                Business loan, Agriculture loan, and more.
+                We offer Home loan, NRI loans, Vehicle loan, Personal loan,
+                Business loan, Agriculture loan,Loan against Property, OD, Gold loan and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="/contact">
