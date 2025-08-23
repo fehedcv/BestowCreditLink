@@ -51,7 +51,7 @@ const HomePage = () => {
       title: 'Home Loan',
       description: 'Fulfill your dream of owning a home with our competitive home loan rates',
       specialty: 'Dream Home Solutions',
-      rate: '8.5% onwards',
+      rate: '7.60% onwards',
       features: ['Quick approval', 'Flexible tenure', 'Low documentation']
     },
     {

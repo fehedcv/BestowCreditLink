@@ -12,7 +12,7 @@ const RatesPage = () => {
     {
       type: 'home',
       name: 'Home Loan',
-      rate: '8.5% - 12.0%',
+      rate: '7.60% - 12.0%',
       processing: '0.5% - 2.0%',
       features: ['No prepayment charges', 'Tax benefits', 'Flexible tenure']
     },
