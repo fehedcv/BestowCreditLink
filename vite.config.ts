@@ -3,10 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Bestow/',
-  build: {
-    outDir: 'docs' 
-  },
+  base: '/',
   optimizeDeps: {
     exclude: ['lucide-react']
   },
