@@ -4,6 +4,7 @@ import {
   CheckCircle, Star, ArrowRight, Shield, Clock, Award,
   ChevronLeft, ChevronRight
 } from 'lucide-react';
+import {Link} from 'react-router-dom';
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -147,16 +148,16 @@ const HomePage = () => {
                 Business loan, Agriculture loan, Loan against Property, OD, Gold loan and more.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact">
+                <Link to="/contact">
                   <button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200 transform hover:scale-105">
                     Get in Touch
                   </button>
-                </a>
-                <a href="/about">
+                </Link>
+                <Link to="/about">
                   <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-200 transform hover:scale-105">
                     Learn More
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -291,16 +292,16 @@ const HomePage = () => {
               Start your loan application today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200 transform hover:scale-105">
                   Contact Us Today
                 </button>
-              </a>
-              <a href="/about">
+              </Link>
+              <Link to="/about">
                 <button className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-200 transform hover:scale-105">
                   About Our Company
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
