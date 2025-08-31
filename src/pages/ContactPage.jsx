@@ -51,29 +51,29 @@ const ContactPage = () => {
   const contactInfo = [
   {
     icon: Phone,
-    title: 'call us',
+    title: 'Call Us',
     details: ['+91 8330050027', '+91 8330050028'],
-    description: 'mon-sat: 9:00 am - 7:00 pm'
+    description: 'mon-sat: 9:00 AM - 7:00 PM'
   },
   {
     icon: Mail,
-    title: 'email us',
+    title: 'E-mail Us',
     details: ['info@bestowcreditlink.com'],
     description: 'we reply within 24 hours'
   },
   {
     icon: MapPin,
-    title: 'visit us',
-    details: ['kanhangad, kasarkod district, kerala, india'],
-    description: 'mon-fri: 10:00 am - 6:00 pm'
+    title: 'Visit Us',
+    details: ['Kanhangad, Kasaragode district, Kerala, India'],
+    description: 'Mon-Fri: 10:00 AM - 6:00 PM'
   }
 ];
 
 
   const offices = [
     {
-      city: 'head office',
-      address: 'kanhangad, kasarkod district, kerala, india',
+      city: 'Head Office',
+      address: 'Kanhangad, Kasaragode district, Kerala, India',
       phone: '+91 8330050027',
       email: 'info@bestowcreditlink.com'
     }
@@ -84,6 +84,7 @@ const ContactPage = () => {
     'Personal Loan',
     'Vehicle Loan',
     'Business Loan',
+    'NRI Loan',
     'Agriculture Loan',
     'Loan Against Property',
     'Other'
@@ -268,12 +269,8 @@ const ContactPage = () => {
               </div>
               <div className="space-y-2 text-blue-800">
                 <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span className="font-semibold">9:00 AM - 7:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span className="font-semibold">10:00 AM - 4:00 PM</span>
+                  <span>Monday - Saturday:</span>
+                  <span className="font-semibold">9:00 AM - 5:00 PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sunday:</span>
@@ -282,7 +279,7 @@ const ContactPage = () => {
               </div>
             </motion.div>
 
-            {/* Social Media */}
+            {/* Social Media */}{/*
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -307,7 +304,7 @@ const ContactPage = () => {
                   </motion.a>
                 ))}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
 
