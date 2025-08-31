@@ -8,7 +8,6 @@ import {
 
 const AboutPage = () => {
   const stats = [
-    { icon: Award, label: 'Years of Experience', value: '8+' },
     { icon: Building, label: 'Partner Banks & NBFCs', value: '15+' },
     { icon: MapPin, label: 'Cities We Serve', value: '50+' },
     { icon: TrendingUp, label: 'loan Processed', value: '₹25 Crore+' }
@@ -94,11 +93,6 @@ const AboutPage = () => {
 
   const clientTrustFeatures = [
     {
-      icon: Users,
-      title: 'Client Trust',
-      subtitle: '21 lakh+ customers served'
-    },
-    {
       icon: Calculator,
       title: 'Innovative Technology',
       description: 'Utilise our proprietary Loan Calculator for tailored loan options based on market trends.',
@@ -181,37 +175,11 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Who Are We Section */}
+      {/* Who Are We Section */} 
       <section className="py-16 bg-white">
+        
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Who Are We?</h2>
-            <p className="text-sm text-gray-600 uppercase tracking-wide">INDIA'S LEADING LOAN DISTRIBUTION CHANNEL COMPANY</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {whoWeAreItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-sm border text-center"
-              >
-                <div className={`w-12 h-12 ${item.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                  <item.icon size={24} />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.subtitle}</p>
-              </motion.div>
-            ))}
-          </div>
-
+          
           {/* Client Trust and Innovation Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
