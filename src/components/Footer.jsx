@@ -36,7 +36,7 @@ const Footer = () => {
             </Link>
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
               We specialize in providing comprehensive loan solutions including home loan, 
-              NRI loan, personal loan, and business financing to help you achieve your financial goals.
+              NRI loan, personal loan, OD loan and business financing to help you achieve your financial goals.
             </p>
             <div className="flex space-x-4">
               {[Facebook, Instagram].map((Icon, index) => (
