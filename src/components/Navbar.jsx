@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import logo from '../assets/Logo.svg'; 
+import logo from '../assets/Nav_logo.png'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +71,7 @@ const Navbar = () => {
                   <img
                     src={logo}
                     alt="Bestow Credit Link"
-                    className="h-20 w-20 md:h-24 md:w-24 object-contain"
+                    className="h-20 w-20 md:h-24 md:w-24 object-contain mt-2"
                   />
                   <div className="flex items-center space-x-2">
                     <span className="text-base md:text-lg font-bold text-blue-900">
